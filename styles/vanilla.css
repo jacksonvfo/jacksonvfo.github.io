@@ -814,7 +814,7 @@ main {
   font-family: 'Courier New', Courier, monospace;
 }
 
-@media screen and (orientation: landscape){
+@media screen and (max-height: 500px) and (orientation: landscape){
   .overlay-html{
     display: none;
   }
