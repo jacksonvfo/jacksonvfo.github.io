@@ -1,4 +1,9 @@
-steps:
-  - name: set-env-var
-    with: 
-      API_KEY_EMAILJS: ${{ API_KEY_EMAILJS }}
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    steps:
+     - name: set-env-var
+      with: 
+        API_KEY_EMAILJS: ${{secrets.API_KEY_EMAILJS}}
