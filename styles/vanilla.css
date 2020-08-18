@@ -418,24 +418,6 @@ main {
   position: absolute;
 }
 
-.wall1-background {
-  background-image: url('../img/ds3-bg.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.wall2-background {
-  background-image: url('../img/hardware-bg.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.wall3-background {
-  background-image: url('../img/physics-bg.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
 #about-text2 {
   max-height: 70vh;
   width: 25vw;
@@ -718,13 +700,9 @@ main {
   flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
   position: absolute;
-}
-
-#contact-content h2 {
-  width: 50vw;
 }
 
 #transparent-area {
@@ -739,74 +717,13 @@ main {
   text-align: center;
 }
 
-#not-message-wrapper {
+#contact-text {
   display: flex;
   flex-direction: column;
   width: 45vw;
-  justify-content: space-between;
-}
+  justify-content: space-around;
 
-#not-message-wrapper div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#not-message-wrapper div:nth-child(2) {
-  margin-top: 3vh;
-}
-
-#not-message-wrapper div input {
-  margin-top: 0 !important;
-  box-sizing: border-box;
-  width: 30vw;
-  height: 6vh;
-  resize: none;
-  padding-left: 1vw;
-  color: #eef;
-}
-
-#not-message-wrapper div label {
-  padding-top: 1vh;
-}
-
-.form-item {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  background-color: #151520;
-  border: 3px solid #5550;
-}
-
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-  background-color: #151520 !important;
-  border: 3px solid #5550;
-  color: #eef;
-  transition: all 5000s ease-in-out 0s;
-}
-
-textarea {
-  box-sizing: border-box;
-  width: 40vw;
-  resize: none;
-  color: #eef;
-  background-color: #151520 !important;
-  border: 3px solid #5550;
-  margin: 2vh 0 0 0 !important;
-  text-indent: 10px;
-  appearance: textarea;
-  overflow: scroll hidden;
-}
-
-textarea::placeholder {
-  text-align: center;
-  vertical-align: middle;
-}
-
-input[type=text]:focus {
-  border: 3px solid #555;
+  font-size: 2vh;
 }
 
 #black-background {
@@ -865,56 +782,6 @@ input[type=text]:focus {
 #whats-p {
   font-size: 2.2vh;
   font-weight: 900;
-}
-
-button{
-  width: 8vw;
-  height: 5vh;
-
-  border: 3px solid #151520;
-  background-color: transparent;
-  color: #eeF;
-
-  text-transform: uppercase;
-}
-
-button:hover{
-  width: 8vw;
-  height: 5vh;
-
-  border: none;
-  background-color: #151520;
-  color: #eeF;
-}
-
-#email-confirmation{
-  position: absolute;
-  background-color: #00EEBB;
-  color: black;
-  width: 100vw;
-  height: 15vh;
-
-  filter: opacity(80%);
-
-  margin-top: 10vh;
-
-  z-index: 800;
-
-  font-size: 5vh;
-  text-transform: capitalize;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  #apresentacao {
-    flex-flow: column nowrap;
-    height: 100vh;
-    overflow: hidden;
-  }
-  #apresentacao .card {
-    width: 100vw;
-  }
 }
 
 ::-webkit-scrollbar {
