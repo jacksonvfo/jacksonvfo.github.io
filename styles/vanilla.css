@@ -797,6 +797,28 @@ main {
   font-weight: 900;
 }
 
+.overlay-html{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  background-color: #440000;
+  position: absolute;
+
+  color: white;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (orientation: landscape){
+  .overlay-html{
+    display: none;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;

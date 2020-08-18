@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function (event) {
   }, 300);
 
   if(window.mobileCheck()){
-    screen.orientation.lock('landscape');
+    document.getElementById('mobile-wrapper').classList.add("overlay-html");
   }
 
   mainPage();
