@@ -814,12 +814,12 @@ main {
   font-family: 'Courier New', Courier, monospace;
 }
 
-@media all and (max-height: 500px) and (orientation: portrait){
+@media all and (orientation: landscape){
   .overlay-html{
-    display: none;
+    display: none !important;
   }
   #mobile-wrapper{
-    display: none;
+    display: none !important;
   }
 }
 
