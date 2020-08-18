@@ -811,6 +811,8 @@ main {
   align-items: center;
   justify-content: center;
 
+  text-align: center;
+
   font-family: 'Courier New', Courier, monospace;
 }
 
