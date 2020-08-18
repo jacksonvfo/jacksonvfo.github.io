@@ -1,0 +1,4 @@
+steps:
+  - name: set-env-var
+    with: 
+      API_KEY_EMAILJS: ${{ API_KEY_EMAILJS }}
