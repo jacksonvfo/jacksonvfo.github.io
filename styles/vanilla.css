@@ -641,6 +641,7 @@ main {
   filter: invert(100%) contrast(70%);
   padding: 0.5vw;
   max-width: 8vw;
+  height: 8vh;
 }
 
 .neumorphism-disabled {
