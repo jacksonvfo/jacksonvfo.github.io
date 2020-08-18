@@ -818,6 +818,9 @@ main {
   .overlay-html{
     display: none;
   }
+  #mobile-wrapper{
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
