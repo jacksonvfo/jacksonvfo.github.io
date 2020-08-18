@@ -14,7 +14,14 @@ document.addEventListener('DOMContentLoaded', async function (event) {
   }, 300);
 
   if(window.mobileCheck()){
-    await screen.orientation.lock("landscape");
+      widthRatio = 0.95;
+      heightRatio = 0.65;
+      var deg = 0;
+      document.body.style.webkitTransform = 'rotate('+deg+'deg)'; 
+      document.body.style.mozTransform    = 'rotate('+deg+'deg)'; 
+      document.body.style.msTransform     = 'rotate('+deg+'deg)'; 
+      document.body.style.oTransform      = 'rotate('+deg+'deg)'; 
+      document.body.style.transform       = 'rotate('+deg+'deg)'; 
   }
 
   mainPage();
