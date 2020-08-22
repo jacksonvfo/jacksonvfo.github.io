@@ -171,7 +171,7 @@ export async function tech() {
             <h3 id='screen-title'>Java</h3>\
             <p id='screen-paragrath'>É a linguagem em que aprendi a orientação a\
             objetos, estruturas de dados e alguns design patterns. Uma linguagem\
-             que mesmo não sendo 'moda' é uma das mais fortes do por décadas e\
+             que mesmo não sendo 'moda' é uma das mais fortes do mundo por décadas e\
              ainda não demonstra sinal algum de cansaço.</p>\
           </div>\
         ";
