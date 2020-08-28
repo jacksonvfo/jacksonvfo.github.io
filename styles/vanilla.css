@@ -203,24 +203,37 @@ main {
   padding-right: 0.3vw;
   transition: 0.8s all linear;
   opacity: 0.0;
+  cursor: pointer;
 }
 
 .card h1 {
   color: #ddd;
-  transition: 0.3s all linear;
+  transition: 0.6s all ease-in;
+  transform: translate(0, 0);
+  padding: 1vh 1vw;
+  height: 8vh;
+  text-align: center;
+  font-size: 6vh;
 }
 
 .card:hover h1 {
   opacity: 0;
-  margin-top: -16vh;
-  transition: 0.3s all linear;
   color: #ddd;
+  transition: 0.6s all ease-out;
+  transform-style: preserve-3d;
+  transform: translate(0, -6vh) rotateX(90deg);
+  font-size: 5vh;
+
+  box-shadow: 0 5px 2px -2px black;
 }
 
 .card:hover i {
   opacity: 1;
-  margin-top: 0px;
-  transition: 0.3s all linear;
+  transform: translate(0, -2vh) rotateX(0deg);
+  transform-style: preserve-3d;
+  transition: 0.6s all ease-in;
+  cursor: pointer;
+  font-size: 9.5vh !important;
 }
 
 #card1:hover {
@@ -236,12 +249,13 @@ main {
 }
 
 .icon-card {
-  font-size: 5.5rem !important;
+  font-size: 7vh !important;
   opacity: 0;
-  padding: 0;
+  padding: 2vh 5vw;
   position: absolute;
-  margin-top: 22vh;
-  transition: 0.3s all linear;
+  transform: translate(0, 4vh) rotateX(-90deg);
+  transform-style: preserve-3d;
+  transition: 0.6s all ease-out;
 }
 
 #about, #tech {
