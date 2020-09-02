@@ -53,6 +53,7 @@ header {
   position: relative !important;
   transition: all 0.5s linear;
   font-size: 3vh !important;
+  overflow: hidden;
 }
 
 .visible-10-fast {
@@ -267,12 +268,6 @@ main {
   transition: 0.4s all linear;
 }
 
-#about i, #contact i, #tech i {
-  color: #eee;
-  opacity: 1;
-  font-size: 5rem;
-}
-
 #about {
   overflow-x: hidden;
   width: 100vw;
@@ -283,18 +278,19 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: space-around;
+  align-content: space-between;
   width: 100vw;
   height: 100vh;
-  filter: drop-shadow(8px 8px 5px #050505);
+  filter: drop-shadow(8px 3px 5px #050505);
 }
 
-#about #about-text1 {
+#about-text1 {
   font-size: 2vh;
-  max-width: 18.5vw;
+  max-width: 18vw;
   text-align: justify;
   line-height: 3vh;
   text-transform: lowercase;
+  margin-left: 4vw;
 }
 
 #about-img {
@@ -312,53 +308,27 @@ main {
 #about-title {
   display: flex;
   flex-direction: column;
-  font-size: 4vh;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
 }
 
 #about-title h1 {
   color: #eee;
   text-shadow: #eee 0px 0px 3px;
   text-align: center;
-  margin-bottom: 0;
-  padding: 0 2vw;
-}
-
-#about-title p {
-  align-self: center;
+  font-size: 8vh;
+  margin: 0 0 0 4vw;
+  padding: 0;
+  max-width: 21vw;
 }
 
 #about-outer-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   border: solid 1px #050505;
   background-color: #1d1d22;
-}
-
-.outer-flex-bg-change1 {
-  background-image: url('../img/ds3.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.outer-flex-bg-change2 {
-  background-image: url('../img/hardware.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.outer-flex-bg-change3 {
-  background-image: url('../img/physics.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-blend-mode: multiply;
 }
 
 .material-icons {
@@ -369,91 +339,154 @@ main {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .about-card-list {
-  height: 45vh;
-  width: 35vw;
-  filter: saturate(0%);
+  height: 15vh;
+  width: auto;
+  cursor: pointer;
+
+  margin-top: 2vh;
+
+  transform: scale(1.1) translate(-2vw, -2vh);
+
+  clip-path: polygon(15% 0, 85% 0, 85% 100%, 15% 100%);
 }
 
 .about-card-list:hover {
-  filter: saturate(100%);
+  filter: brightness(110%);
 }
 
 #img-wall {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  width: 94vw;
+}
+
+#img-wall > div{
+  display: flex;
   flex-direction: column;
-  background-color: #050505;
-  clip-path: polygon(0 0, 100% 25.3%, 100% 75.5%, 0 100%);
-  filter: saturate(60%) brightness(95%);
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
-#img-wall-wrapper {
-  filter: drop-shadow(10px 20px 10px black);
+#img-wall > div:nth-child(n+2){
+  margin-left: 3vw;
 }
 
-.reset-wall-position {
-  transform: translateX(-19.2vw);
-  transition: all 0.6s linear;
+#img-wall > div:nth-child(1){
+  background-image: url('../img/ds3.jpg');
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-#wall1 {
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
+#img-wall > div:nth-child(2){
+  background-image: url('../img/hardware.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-#wall2 {
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
-  margin-top: -22vh;
+
+#img-wall > div:nth-child(3){
+  background-image: url('../img/physics.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-#wall3 {
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-  margin-top: -22vh;
+.card-container{
+  width: 28vw;
+  transform: scale(1.01);
 }
 
-.inactive-wall {
-  filter: grayscale(100%) brightness(50%);
-}
+.backdrop{
+  backdrop-filter: blur(45px);
+  -moz-backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+  background-blend-mode: exclusion;
+  background: rgba(30, 30, 30, .3);
+  border-radius: 1px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .3);
+  filter: brightness(100%) blur(1px);
 
-.inactive-wall:hover {
-  filter: grayscale(100%);
-}
-
-.vertical {
-  border-left: 10px solid white;
-  height: 75vh;
-  margin-left: 50%;
-  filter: drop-shadow(0 0 5px white) blur(3px);
   position: absolute;
 }
 
-#about-text2 {
-  max-height: 70vh;
-  width: 25vw;
+#backdrop1, #backdrop3{
+  width: 28vw;
+  height: 55vh;
+}
+
+#backdrop2{
+  width: 28vw;
+  height: 70vh;
+}
+
+.about-text {
+  width: 26vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s linear;
   text-transform: lowercase;
-  line-height: 1.5em;
-  border: 0.1vw #fcc solid;
-  clip-path: polygon(0 0, 100% 0%, 99% 1%, 100% 100%, 0 100%, 0.8% 99%);
-}
+  line-height: 1.2em;
+} 
 
-#about-text2 p {
+.about-text p {
   padding: 0 2.5vw 2.5vw 2.5vw;
-  color: #fcc;
+  margin: 0;
+  color: #fEEC;
   font-size: 2vh;
+
+  font-weight: 600;
+
+  z-index: 3;
 }
 
-#about-text2 h3 {
-  padding: 2vw 10vw 0 10vw;
+.about-card-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 2.5vw 4vh 0vw;
+
+  filter: drop-shadow(10px 10px 15px #000A);
+
+  text-transform: none;
+
+  text-align: right;
+}
+
+.about-card-header p {
+  margin: 0;
+  color: #fEEC;
+  font-size: 1.7vh;
+
+  font-weight: 300;
+
+  z-index: 3;
+}
+
+.about-card-header h3 {
+  color: #fEEF;
+  z-index: 3;
+  margin: 3vh 0 2vh 0;
+
+  font-weight: 800;
+  font-size: 4vh;
 }
 
 #tech-content-wrapper {
@@ -802,6 +835,11 @@ main {
   display: none;
 }
 
+.hiddenText {
+  opacity: 0;
+  display: none;
+}
+
 #gmail-p {
   font-size: 1.8vh;
   font-weight: 900;
@@ -921,5 +959,30 @@ main {
   }
   100% {
     transform: translate(0, 2px);
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  #img-wall > div:nth-child(1){
+    background-image: none;
+  }
+  
+  #img-wall > div:nth-child(2){
+    background-image: none;
+  }
+  
+  
+  #img-wall > div:nth-child(3){
+    background-image: none;
+  }
+
+  .backdrop{
+    background: rgba(50, 50, 50, .6);
+    border-radius: 1px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2), 0 1px 5px rgba(0, 0, 0, .3);
+    filter: brightness(100%) blur(1px);
+  
+    position: absolute;
   }
 }
