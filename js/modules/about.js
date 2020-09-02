@@ -33,7 +33,7 @@ export async function about() {
                       <p> Ultra : on </p>\
                     </div>\
                   </div>\
-                  <div id='about-card1-text'>\
+                  <div class='about-card-text'>\
                     <div id='about-text2' class='about-text'>\
                       <p> Meu passatempo mais antigo. Uma boa jogabilidade, aliada a uma boa história,\
                       fazem com que eu possa passar horas a fio imerso em um mundo a se explorar.\
@@ -53,7 +53,7 @@ export async function about() {
                       <p> isso ai vai gargalar </p>\
                     </div>\
                   </div>\
-                  <div id='about-card2-text'>\
+                  <div class='about-card-text'>\
                     <div id='about-text3' class='about-text'>\
                       <p> Como consequência dos games, veio o interesse por hardware de desktop.\
                       Ja se passaram algumas noites em que fiquei estudando CPUs, GPUs e todo o\
@@ -76,7 +76,7 @@ export async function about() {
                       <p> nessa caixa </p>\
                     </div>\
                   </div>\
-                  <div id='about-card3-text'>\
+                  <div class='about-card-text'>\
                     <div id='about-text4' class='about-text'>\
                       <p> Nenhum hobby me ensinou tanto quanto o de saciar minha curiosidade\
                       de como o mundo funciona. Seja em como\

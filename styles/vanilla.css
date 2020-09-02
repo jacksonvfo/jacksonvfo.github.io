@@ -489,6 +489,12 @@ main {
   font-size: 4vh;
 }
 
+.about-card-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #tech-content-wrapper {
   width: 100vw;
   height: 100vh;
