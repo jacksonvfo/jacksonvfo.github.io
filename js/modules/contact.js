@@ -1,5 +1,3 @@
-import { sleep } from '../script.js';
-
 export async function contact() {
   
   let htmlElement =
@@ -20,14 +18,6 @@ export async function contact() {
                 <img src='https://img.icons8.com/ios/72/linkedin.png' />\
               </a>\
             </div>\
-            <div id='gmail' class='contact-icons'>\
-              <img id='gmail-img' src='https://img.icons8.com/ios-filled/72/gmail.png' />\
-              <p id='gmail-p' class='hidden'> jacksonvfo@gmail.com </p>\
-            </div>\
-            <div id='whats' class='contact-icons'>\
-              <img id='whats-img' src='https://img.icons8.com/ios/72/whatsapp.png' />\
-              <p id='whats-p' class='hidden'> +55 45 99929-8962 </p>\
-            </div>\
           </div>\
         </div>\
         <div id='transparent-background' class='noise'></div>\
@@ -35,30 +25,4 @@ export async function contact() {
     </div>";
 
   document.getElementById('apresentacao').innerHTML = htmlElement;
-
-  eventListenersMouseOver();
 };
-
-async function eventListenersMouseOver() {
-  let contact_icons = document.querySelectorAll(".contact-icons");
-
-  contact_icons.forEach(function (elem) {
-    elem.addEventListener("mouseover", async function () {
-      if(elem.id==='gmail'){
-        document.getElementById('gmail-img').classList.add('moveOut');
-        await sleep(500);
-        document.getElementById('gmail-img').classList.replace('moveOut', 'hidden');
-
-        document.getElementById('gmail-p').classList.replace('hidden', 'moveIn');
-
-      } else if(elem.id==='whats'){
-        document.getElementById('whats-img').classList.add('moveOut');
-        await sleep(500);
-        document.getElementById('whats-img').classList.replace('moveOut', 'hidden');
-
-        document.getElementById('whats-p').classList.replace('hidden', 'moveIn');
-      }  
-    });
-  });
-
-}

@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', async function (event) {
     document.getElementById('apresentacao').classList.add("change-bg-dark-grey");
   }, 300);
 
-  if(window.mobileCheck()){
+  /*if(window.mobileCheck()){
     document.getElementById('mobile-wrapper').classList.add("overlay-html");
-  }
+  }*/
 
   mainPage();
 });
@@ -89,18 +89,26 @@ async function mainPage() {
 
 function renderCards() {
   document.getElementById('apresentacao').innerHTML =
-    "<div class='card' id='card1'>\
-      <h1>sobre</h1>\
-      <i class='material-icons icon-card' id='icon-about'>account_circle</i>\
-     </div>\
-     <div class='card' id='card2'>\
-      <h1>tecnologias</h1>\
-      <i class='material-icons icon-card' id='icon-tech'>code</i>\
-     </div>\
-     <div class='card' id='card3'>\
-      <h1>contato</h1>\
-      <i class='material-icons icon-card' id='icon-contact'>phone</i>\
-     </div>";
+    "<div id='card-group-wrapper'>\
+      <div id='card1-wrapper' class='card-wrapper'>\
+        <div class='card' id='card1'>\
+          <h1>sobre</h1>\
+          <i class='material-icons icon-card' id='icon-about'>account_circle</i>\
+        </div>\
+      </div>\
+      <div id='card2-wrapper' class='card-wrapper'>\
+        <div class='card' id='card2'>\
+          <h1>tecnologias</h1>\
+          <i class='material-icons icon-card' id='icon-tech'>code</i>\
+        </div>\
+      </div>\
+      <div id='card3-wrapper' class='card-wrapper'>\
+        <div class='card' id='card3'>\
+          <h1>contato</h1>\
+          <i class='material-icons icon-card' id='icon-contact'>phone</i>\
+        </div>\
+      </div>\
+    </div>";
 }
 
 async function changeVisibility(elementID, visibility, time) {
@@ -108,16 +116,6 @@ async function changeVisibility(elementID, visibility, time) {
 
   let element = document.getElementById(elementID);
   element.classList.add(visibility);
-}
-
-function addElement(rootElement, content) {
-  let element = document.getElementById(rootElement);
-  element.innerHTML += content;
-}
-
-async function removeElementById(element) {
-  await sleep(1000);
-  document.getElementById(element).remove();
 }
 
 async function removeElementByClass(element) {

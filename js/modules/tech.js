@@ -5,6 +5,8 @@ export async function tech() {
   let htmlElement =
     "<div id='tech'>\
       <div id='tech-content-wrapper'>\
+        <div id='tech-vertical-bar1'> </div>\
+        <div id='tech-vertical-bar2'> </div>\
         <div class='tech-button' id='js'> JS </div>\
         <div class='tech-button' id='uxui'> UX/UI </div>\
         <div class='tech-button' id='react'> React </div>\
