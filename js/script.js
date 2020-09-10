@@ -21,16 +21,30 @@ document.addEventListener('DOMContentLoaded', async function (event) {
 });
 
 async function mainPage() {
-  let htmlElement = "<h1 id='initial-bar' class='welcome-element'> | </h1>\n"
+  
+  let htmlElement;
+  
+  if(window.mobileCheck()){
+    htmlElement = "<h1 id='initial-text2' class='welcome-element'>Este é meu site pessoal</h1>";
+
+    document.getElementById('apresentacao').innerHTML += htmlElement;
+
+    await changeVisibility('initial-text2', 'visible-05', 1000);
+    await changeVisibility('initial-text2', 'invisible', 4000);
+    await changeVisibility('header-title', 'invisible', 500);
+    
+  } else {
+    htmlElement = "<h1 id='initial-bar' class='welcome-element'> | </h1>\n"
     + "<h1 id='initial-text2' class='welcome-element'>Este é meu site pessoal</h1>";
 
-  document.getElementById('apresentacao').innerHTML += htmlElement;
+    document.getElementById('apresentacao').innerHTML += htmlElement;
 
-  await changeVisibility('initial-bar', 'visible-05', 1500);
-  await changeVisibility('initial-text2', 'visible-05', 1000);
-  await changeVisibility('initial-text2', 'invisible', 4000);
-  await changeVisibility('initial-bar', 'invisible', 500);
-  await changeVisibility('header-title', 'invisible', 500);
+    await changeVisibility('initial-bar', 'visible-05', 1500);
+    await changeVisibility('initial-text2', 'visible-05', 1000);
+    await changeVisibility('initial-text2', 'invisible', 4000);
+    await changeVisibility('initial-bar', 'invisible', 500);
+    await changeVisibility('header-title', 'invisible', 500);
+  }
 
   await sleep(1000);
 
