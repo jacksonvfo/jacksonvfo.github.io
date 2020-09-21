@@ -115,7 +115,7 @@ export async function tech() {
           <div id='tech-text'>\
             <h3 id='screen-title'>Node.js</h3>\
             <p id='screen-paragrath'>Mais recentemente comecei a usar o node.js\
-            para a criação de API express com o axios. Além da agilidade de setup,\
+            para a criação de API express se comunicando com o axios no front. Além da agilidade de setup,\
             usar a mesma linguagem no back-end reduziu um pouco a curva de\
             aprendizado.</p>\
           </div>\
